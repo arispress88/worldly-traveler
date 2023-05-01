@@ -1,0 +1,42 @@
+.main--container {
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section--middle {
+    flex: 1;
+    flex-direction: column;
+    background-color: lightgreen;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section--left,
+.section--right {
+    width: 400px;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px
+}
+
+.section--left{
+    background-color: lightcoral;
+    border-right: solid 4px black;
+}
+
+.section--right {
+    background-color: lightcoral;
+    border-left: solid 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.locations--container {
+    height: 50%;
+    text-align: center;
+    padding-top: 20px;
+}

@@ -1,0 +1,15 @@
+.locations {
+    padding: 10px;
+}
+
+.location {
+    background-color: beige;
+    padding: 15px;
+    border: 1px dotted black;
+    margin: 15px;
+}
+
+.location--post {
+    font-weight: bolder;
+    font-size: medium;
+}

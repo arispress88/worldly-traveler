@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Arnold Rispress",
+      "email": "arnold@user.com"
+    },
+    {
+      "email": "unc@user.com",
+      "fullName": "Charlie Wilson",
+      "id": 2
+    },
+    {
+      "email": "paula@user.com",
+      "fullName": "Paula User",
+      "id": 3
+    },
+    {
+      "email": "arnold@user.com",
+      "fullName": "Arnold Rispress",
+      "id": 4
+    },
+    {
+      "email": "arnold@user.com",
+      "fullName": "Arnold Rispress",
+      "id": 5
+    },
+    {
+      "email": "arnold@user.com",
+      "fullName": "Arnold Rispress",
+      "id": 6
+    },
+    {
+      "email": "",
+      "fullName": "",
+      "formBasicEmail": "bill@user.com",
+      "formFullName": "Bill Nye",
+      "id": 7
+    },
+    {
+      "email": "arnold@user.com",
+      "fullName": "Arnold Rispress",
+      "id": 8
+    }
+  ],
+  "locations": [
+    {
+      "userId": 3,
+      "city": "Dublin",
+      "country": "Ireland",
+      "date": "2023-05-01T19:25:31.375Z",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "city": "Cleveland",
+      "country": "USA",
+      "date": "2023-05-01T19:48:21.745Z",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "city": "London",
+      "country": "England",
+      "date": "2023-05-01T19:50:49.490Z",
+      "id": 3
+    }
+  ],
+  "tasks": [],
+  "images": []
+}
