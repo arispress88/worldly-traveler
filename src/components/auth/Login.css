@@ -59,3 +59,33 @@ fieldset {
     position: relative;
     bottom: -2rem;
 }
+
+.login--form {
+    background-image: url(https://media.istockphoto.com/id/1285301614/photo/young-man-arms-outstretched-by-the-sea-at-sunrise-enjoying-freedom-and-life-people-travel.jpg?s=612x612&w=0&k=20&c=0QW6GnkuFNYcPZhy26XVHuTc2avJTK8u6l_1iT0SlZk=);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+h1,
+h4 {
+    color: black;
+    background-color: white;
+}
+
+.mb-3 {
+    color: black;
+    background-color: white;
+}
+
+.link--register {
+    font-weight: bold;
+    font-size: medium;
+    padding-top: 8rem;
+}

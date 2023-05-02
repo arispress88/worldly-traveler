@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getLocation } from "../../ApiManager";
+import { deleteLocation, getLocation } from "../../ApiManager";
 import "./Locations.css"
+import { EditLocation } from "./EditLocation"
+import { Button } from "react-bootstrap";
+
 
 export const LocationList = () => {
     const [locations, setLocations] = useState([])
 
-    const localUser = localStorage.getItem("worldly_user")
-    const userObject = JSON.parse(localUser) 
+    
 
     const navigate = useNavigate()
 
@@ -29,8 +31,12 @@ export const LocationList = () => {
             locations.map(location => {
                 return <section className="location" key={`location--${location.id}`}>
                     <div className="location--post">
-                        {location.userId} is traveling to {location.city} in {location.country}
+                        {location?.user?.fullName} is traveling to {location.city} in {location.country}
                     </div>
+                    <Button variant="danger" type="delete" onClick={() => deleteLocation(location.id)}>Delete</Button> 
+                    <Button variant="dark" type="edit" onClick={() => navigate("/locations/edit/:locationId")}>
+                        Edit
+                    </Button>
                 </section>
             })
         }

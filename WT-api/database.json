@@ -50,22 +50,49 @@
       "country": "Ireland",
       "date": "2023-05-01T19:25:31.375Z",
       "id": 1
-    },
-    {
-      "userId": 2,
-      "city": "Cleveland",
-      "country": "USA",
-      "date": "2023-05-01T19:48:21.745Z",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "city": "London",
-      "country": "England",
-      "date": "2023-05-01T19:50:49.490Z",
-      "id": 3
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Find a restaurant in the countryside"
+    },
+    {
+      "id": 2,
+      "task": "Speak to an older citizen"
+    },
+    {
+      "id": 3,
+      "task": "Visit a library"
+    },
+    {
+      "id": 4,
+      "task": "Attend a local festival"
+    },
+    {
+      "id": 5,
+      "task": "Find a local pub/bar and have a drink (you've earned it)"
+    },
+    {
+      "id": 6,
+      "task": "Visit a beach/forest"
+    },
+    {
+      "id": 7,
+      "task": "Get out of the city and star gaze"
+    },
+    {
+      "id": 8,
+      "task": "Go to a historic neighborhood"
+    },
+    {
+      "id": 9,
+      "task": "Go to a local market"
+    },
+    {
+      "id": 10,
+      "task": "Visit a local park"
+    }
+  ],
   "images": []
 }

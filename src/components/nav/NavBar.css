@@ -2,12 +2,15 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-    background-color: lightgreen;
+    background-color: firebrick;
+    
 }
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    font-size: medium;
+    background-color: aliceblue;
 }
 
 .navbar__logout {

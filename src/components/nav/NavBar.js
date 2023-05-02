@@ -13,6 +13,9 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/locations/create">Add Your Location</Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/links">Helpful Links</Link>
+            </li>
             {
                 localStorage.getItem("worldly_user")
                 ? <li className="navbar__item navbar__logout">

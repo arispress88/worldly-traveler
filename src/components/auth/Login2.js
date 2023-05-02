@@ -30,6 +30,7 @@ export const Login2 = () => {
     }
 
     return (
+        <div className="login--form">
         <Form onSubmit={handleLogin}>
           <h1>Worldly Traveler</h1>
           <h4>Please log in</h4>
@@ -50,5 +51,6 @@ export const Login2 = () => {
         <Link to="/register">Not a member yet?</Link>
     </section>
     </Form>
+    </div>
   );
 }

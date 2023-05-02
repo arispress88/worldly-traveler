@@ -1,34 +1,31 @@
-//THIS MODULE IS FOR THE USER TO FILL OUT THE LOCATION IN WHICH THEY ARE TRAVELING TO//
+//THIS MODULE IS FOR EDITING THE LOCATION POST//
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { createLocation } from "../../ApiManager";
-import Button from "react-bootstrap/Button";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { editLocation, getLocationById } from "../../ApiManager";
+import { Button } from "react-bootstrap";
 
-export const LocationForm = () => {
+export const EditLocation = () => {
     const [location, update] = useState({
         city: "",
         country: "",
         date: ""
     })
-    
+
     const navigate = useNavigate()
 
-    const localUser = localStorage.getItem("worldly_user")
-    const userObject = JSON.parse(localUser)
+    const { locationId } = useParams()
 
-    const handleSaveButtonClick = (event) => {
-        event.preventDefault()
-        console.log("You clicked the button!")
+    useEffect(() => {
+        getLocationById(locationId)
+        .then((locationArray) => {
+            update(locationArray)
+        })
+    }, [])
 
-        const infoToSendToAPI = {
-            userId: userObject.id,
-            city: location.city,
-            country: location.country,
-            date: new Date().toISOString()
-        }
-
-        return createLocation(infoToSendToAPI)
+    const handleSaveButtonClick = (evt) => {
+        evt.preventDefault()
+        editLocation(location)
         .then(() => {
             navigate("/")
         })
@@ -36,7 +33,7 @@ export const LocationForm = () => {
 
     return (
         <form className="locationForm">
-            <h2 className="locationForm--title">Add your location!</h2>
+            <h2 className="locationForm--title">Edit your location</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="city">City</label>
@@ -45,7 +42,7 @@ export const LocationForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="City"
-                        value={location.city}
+                        value={location?.city}
                         onChange={
                             (evt) => {
                                 const copy = {...location}
@@ -63,7 +60,7 @@ export const LocationForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Country"
-                        value={location.country}
+                        value={location?.country}
                         onChange={
                             (evt) => {
                                 const copy = {...location}
@@ -76,7 +73,7 @@ export const LocationForm = () => {
 
             <Button variant="success" type="submit"
                 onClick={(event) => {handleSaveButtonClick(event)}}>
-                    Submit
+                    Submit Changes
                 </Button>
         </form>
     )

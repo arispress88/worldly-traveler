@@ -3,6 +3,8 @@ import "./ApplicationViews.css"
 import { Profile } from "../components/profile/Profile";
 import { LocationForm } from "../components/locations/LocationForm";
 import { LocationList } from "../components/locations/LocationList";
+import { Tasks } from "../components/tasks/Tasks";
+import { EditLocation } from "../components/locations/EditLocation";
 
 export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
     return (
@@ -10,11 +12,11 @@ export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
             <Route path="/" element={
                 <>
                     <h1>Worldly Traveler</h1>
-                    <h3>Take a journey off the beaten path</h3>
+                    <h4>"Travel doesn't become adventure until you leave yourself behind"</h4>
 
                     <div className="main--container">
                         <div className="section--left">
-                            <div ref={tasksRef}  id="tasks" className="tasks--container">Tasks will go here</div>
+                            <div ref={tasksRef}  id="tasks" className="tasks--container"><Tasks /></div>
                         </div>
 
                         <div className="section--middle">
@@ -33,8 +35,9 @@ export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
                 
                 
             </Route>
-            <Route path="profile" element={ <Profile />} />
+            <Route path="/profile" element={ <Profile />} />
                 <Route path="/locations/create" element={ <LocationForm />} />
+                <Route path="/locations/edit/:locationId" element={ <EditLocation />} />
         </Routes>
     )
 }
