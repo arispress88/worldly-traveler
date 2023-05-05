@@ -8,8 +8,7 @@ import { Button } from "react-bootstrap";
 export const EditLocation = () => {
     const [location, update] = useState({
         city: "",
-        country: "",
-        date: ""
+        country: ""
     })
 
     const navigate = useNavigate()
@@ -72,7 +71,7 @@ export const EditLocation = () => {
             </fieldset>
 
             <Button variant="success" type="submit"
-                onClick={(event) => {handleSaveButtonClick(event)}}>
+                onClick={(clickEvent) => {handleSaveButtonClick(clickEvent)}}>
                     Submit Changes
                 </Button>
         </form>

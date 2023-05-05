@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+Garamond&family=Dancing+Script&display=swap');
+
 .locations {
     padding: 10px;
 }
@@ -11,5 +13,31 @@
 
 .location--post {
     font-weight: bolder;
-    font-size: medium;
+    font-size: x-large;
+    font-family: 'Alata', sans-serif;
+}
+
+.form-control {
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+.locationForm--title {
+    font-weight: bolder;
+    background-color: lightskyblue;
+    width: 500px center;
+    margin: 2rem 
+}
+
+.form-group {
+    margin: 1rem;
+    width: 500px center;
+    font-weight: bolder;
+}
+
+.location--label {
+    font-weight: bolder;
+    font-size: 100%;
+    color: black;
+    background-color: lightskyblue;
 }

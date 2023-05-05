@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Dancing+Script&display=swap');
+
 .main--container {
     display: flex;
     width: 100%;
     font-size: 1.5rem;
     font-weight: bold;
+    
 }
 
 .section--middle {
@@ -39,4 +42,31 @@
     height: 50%;
     text-align: center;
     padding-top: 20px;
+}
+
+.tasks--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.completedTasks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.worldly--title {
+    padding: 2rem;
+    background-color: #3668ff;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bolder;
+    color: lightgrey;
+}
+
+.worldly--quote {
+    padding: 1rem;
+    background-color: cornsilk;
+    color: crimson;
+    font-family:'Dancing Script', cursive;
+    font-weight: bolder;
 }

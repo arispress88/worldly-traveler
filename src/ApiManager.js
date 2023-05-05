@@ -35,10 +35,28 @@ export const deleteLocation = (id) => {
     return fetch(`http://localhost:8088/locations/${id}`, {
         method: "DELETE",
     })
+    .then(() => getLocation())
 }
 
 //TASKS//
 export const getTasks = () => {
     return fetch(`http://localhost:8088/tasks`)
+    .then(r => r.json())
+}
+
+//IMAGES//
+export const getImages = () => {
+    return fetch(`http://localhost:8088/images?_expand=user`)
+    .then(r => r.json())
+}
+
+export const addImage = (imageObject) => {
+    return fetch(`http://localhost:8088/images`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(imageObject)
+    })
     .then(r => r.json())
 }

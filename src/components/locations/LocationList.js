@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { deleteLocation, getLocation } from "../../ApiManager";
 import "./Locations.css"
-import { EditLocation } from "./EditLocation"
 import { Button } from "react-bootstrap";
 
 
@@ -33,8 +32,13 @@ export const LocationList = () => {
                     <div className="location--post">
                         {location?.user?.fullName} is traveling to {location.city} in {location.country}
                     </div>
-                    <Button variant="danger" type="delete" onClick={() => deleteLocation(location.id)}>Delete</Button> 
-                    <Button variant="dark" type="edit" onClick={() => navigate("/locations/edit/:locationId")}>
+                    <Button variant="danger" type="delete" onClick={() => deleteLocation(location.id)
+                     .then(
+                        (locations) => {
+                            setLocations(locations)
+                        }
+                    )}>Delete</Button> 
+                    <Button variant="dark" type="edit" onClick={() => navigate(`/locations/edit/${location.id}`)}>
                         Edit
                     </Button>
                 </section>

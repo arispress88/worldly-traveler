@@ -7,6 +7,9 @@ export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">
+                <Link className="navbar__link" to="/">Home</Link>
+            </li>
+            <li className="navbar__item active">
                 <Link className="navbar__link" to="/profile">Profile</Link>
             </li>
 
@@ -15,6 +18,9 @@ export const NavBar = () => {
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/links">Helpful Links</Link>
+            </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/images/add">Add an image</Link>
             </li>
             {
                 localStorage.getItem("worldly_user")

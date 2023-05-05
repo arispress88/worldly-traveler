@@ -5,26 +5,30 @@ import { LocationForm } from "../components/locations/LocationForm";
 import { LocationList } from "../components/locations/LocationList";
 import { Tasks } from "../components/tasks/Tasks";
 import { EditLocation } from "../components/locations/EditLocation";
+import { CompletedTask } from "../components/tasks/completedTask";
+import { ImageForm } from "../components/images/ImageForm";
+import { Images } from "../components/images/Images";
 
 export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
     return (
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Worldly Traveler</h1>
-                    <h4>"Travel doesn't become adventure until you leave yourself behind"</h4>
+                    <h1 className="worldly--title">Worldly Traveler</h1>
+                    <h4 className="worldly--quote">"Travel doesn't become adventure until you leave yourself behind."</h4>
 
                     <div className="main--container">
                         <div className="section--left">
                             <div ref={tasksRef}  id="tasks" className="tasks--container"><Tasks /></div>
                         </div>
+                        
 
                         <div className="section--middle">
                             <div ref={locationRef} id="locations" className="locations--container"><LocationList /></div>
                         </div>
 
                         <div className="section--right">
-                            <div ref={imageRef} id="images" className="images--container">Pics go here</div>
+                            <div ref={imageRef} id="images" className="images--container"><Images /></div>
                         </div>
                     </div>
 
@@ -38,6 +42,7 @@ export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
             <Route path="/profile" element={ <Profile />} />
                 <Route path="/locations/create" element={ <LocationForm />} />
                 <Route path="/locations/edit/:locationId" element={ <EditLocation />} />
+                <Route path="/images/add" element={ <ImageForm />} />
         </Routes>
     )
 }

@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+Garamond&family=Dancing+Script&display=swap');
+
 .task {
-    background-color: darkgoldenrod;
-    color: white;
+    background-color: slategray;
+    color: black;
     width: fit-content;
+    font-family: 'Alata', sans-serif;
 }
 
+.progress-bar {
+    color: blue;
+}
+
+.progress-report {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: larger;
+}

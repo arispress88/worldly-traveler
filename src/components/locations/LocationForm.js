@@ -39,7 +39,7 @@ export const LocationForm = () => {
             <h2 className="locationForm--title">Add your location!</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="city">City</label>
+                    <label className="location--label" htmlFor="city">City</label>
                     <input
                         required autoFocus
                         type="text"
@@ -57,7 +57,7 @@ export const LocationForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="country">Country</label>
+                    <label className="location--label" htmlFor="country">Country</label>
                     <input
                         required autoFocus
                         type="text"

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+Garamond&family=Dancing+Script&display=swap');
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image--button {
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.body, body {
+    background-image: url(https://media.istockphoto.com/id/1285301614/photo/young-man-arms-outstretched-by-the-sea-at-sunrise-enjoying-freedom-and-life-people-travel.jpg?s=612x612&w=0&k=20&c=0QW6GnkuFNYcPZhy26XVHuTc2avJTK8u6l_1iT0SlZk=);
+    background-size: cover;
+    text-align: center;
+    font-weight: bolder;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+}
+
+#image-url,
+#image-caption {
+    background-color: lightgrey;
+    font-weight: bolder;
+}
+
+.image--title {
+    font-weight: bolder;
+    background-color: lightskyblue;
+    width: 500px center;
+    margin: 2rem ;
+}
+
+.image--label {
+    font-weight: bolder;
+    font-size: 100%;
+    color: black;
+    background-color: lightskyblue;
+}
+
+.image--caption {
+    font-family: 'Alata', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.image--post {
+    font-family: 'Alata', sans-serif;
+    font-size: small;
+}

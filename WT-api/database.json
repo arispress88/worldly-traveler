@@ -16,21 +16,6 @@
       "id": 3
     },
     {
-      "email": "arnold@user.com",
-      "fullName": "Arnold Rispress",
-      "id": 4
-    },
-    {
-      "email": "arnold@user.com",
-      "fullName": "Arnold Rispress",
-      "id": 5
-    },
-    {
-      "email": "arnold@user.com",
-      "fullName": "Arnold Rispress",
-      "id": 6
-    },
-    {
       "email": "",
       "fullName": "",
       "formBasicEmail": "bill@user.com",
@@ -38,9 +23,9 @@
       "id": 7
     },
     {
-      "email": "arnold@user.com",
-      "fullName": "Arnold Rispress",
-      "id": 8
+      "email": "dana@user.com",
+      "fullName": "Dana User",
+      "id": 9
     }
   ],
   "locations": [
@@ -48,8 +33,8 @@
       "userId": 3,
       "city": "Dublin",
       "country": "Ireland",
-      "date": "2023-05-01T19:25:31.375Z",
-      "id": 1
+      "date": "2023-05-03T15:46:02.652Z",
+      "id": 2
     }
   ],
   "tasks": [
@@ -94,5 +79,24 @@
       "task": "Visit a local park"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "userId": 3,
+      "imageUrl": "https://www.oursweetadventures.com/wp-content/uploads/2019/01/IMG_3661-1024x583.jpg",
+      "caption": "Cool castle in Ireland",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "imageUrl": "https://irelandwalkhikebike.com/wp-content/uploads/2019/06/Bunratty-Castle.jpg",
+      "caption": "It's amazing what you can find outside the city!",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "imageUrl": "https://thumbs.dreamstime.com/b/traditional-english-pub-people-51113420.jpg",
+      "caption": "Found a really neat pub!",
+      "id": 3
+    }
+  ]
 }
