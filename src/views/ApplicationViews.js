@@ -5,9 +5,9 @@ import { LocationForm } from "../components/locations/LocationForm";
 import { LocationList } from "../components/locations/LocationList";
 import { Tasks } from "../components/tasks/Tasks";
 import { EditLocation } from "../components/locations/EditLocation";
-import { CompletedTask } from "../components/tasks/completedTask";
 import { ImageForm } from "../components/images/ImageForm";
 import { Images } from "../components/images/Images";
+import { Links } from "../components/links/Links";
 
 export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
     return (
@@ -43,6 +43,7 @@ export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
                 <Route path="/locations/create" element={ <LocationForm />} />
                 <Route path="/locations/edit/:locationId" element={ <EditLocation />} />
                 <Route path="/images/add" element={ <ImageForm />} />
+                <Route path="/links" element={ <Links />} />
         </Routes>
     )
 }

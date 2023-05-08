@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cormorant+Garamond&family=Dancing+Script&display=swap');
+
+.links--title {
+    font-family: 'Alata', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.links--caption {
+    font-family: 'Alata', sans-serif;
+    font-size: light;
+    font-weight: lighter;
+}
+
+.links--link {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-weight: initial;
+}

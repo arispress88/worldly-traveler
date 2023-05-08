@@ -12,7 +12,7 @@
     },
     {
       "email": "paula@user.com",
-      "fullName": "Paula User",
+      "fullName": "Paula Mooney",
       "id": 3
     },
     {
@@ -30,11 +30,11 @@
   ],
   "locations": [
     {
-      "userId": 3,
-      "city": "Dublin",
-      "country": "Ireland",
-      "date": "2023-05-03T15:46:02.652Z",
-      "id": 2
+      "userId": 1,
+      "city": "Stockholm",
+      "country": "Sweden",
+      "date": "2023-05-08T17:29:15.635Z",
+      "id": 3
     }
   ],
   "tasks": [

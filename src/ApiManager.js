@@ -60,3 +60,10 @@ export const addImage = (imageObject) => {
     })
     .then(r => r.json())
 }
+
+//USERS//
+
+export const getUsers = () => {
+    return fetch(`http://localhost:8088/users`)
+    .then(r => r.json())
+}
