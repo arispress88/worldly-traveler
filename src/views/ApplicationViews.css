@@ -11,7 +11,8 @@
 .section--middle {
     flex: 1;
     flex-direction: column;
-    background-color: lightgreen;
+    background-size: contain;
+    background-image: url(https://www.artsandcollections.com/wp-content/uploads/2018/08/maps.jpg);
     align-items: center;
     justify-content: space-around;
 }

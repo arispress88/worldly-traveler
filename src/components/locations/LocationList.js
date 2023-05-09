@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteLocation, getLocation, getUsers } from "../../ApiManager";
+import { deleteLocation, getLocation } from "../../ApiManager";
 import "./Locations.css"
 import { Button } from "react-bootstrap";
 
 
 export const LocationList = () => {
     const [locations, setLocations] = useState([])
-    const [currentUser, setCurrentUser] = useState(null)
+    
 
     
 
@@ -26,23 +26,13 @@ export const LocationList = () => {
         }, []
     )
 
-    useEffect(
-        () => {
-            getUsers()
-            const user = getUsers();
-            setCurrentUser(user)
-        }, []
-    )
-
-
-    const isCurrentUserPoster = currentUser && currentUser.id === locations?.user?.id
 
     return <article className="locations">
         {
             locations.map(location => {
                 return <section className="location" key={`location--${location.id}`}>
                     <div className="location--post">
-                        {location?.user?.fullName} is traveling to {location.city} in {location.country}
+                        {location?.user?.fullName} (Lvl. {location?.user?.level}) is traveling to {location.city} in {location.country}
                     </div>
                 
                     <Button
@@ -53,7 +43,7 @@ export const LocationList = () => {
                             setLocations(locations);
                             })
                         }
-                            disabled={!isCurrentUserPoster}
+                           
                     >
                         Delete
                     </Button>
@@ -61,7 +51,7 @@ export const LocationList = () => {
                         variant="dark"
                         type="edit"
                         onClick={() => navigate(`/locations/edit/${location.id}`)}
-                        disabled={!isCurrentUserPoster}
+                        
                     >
                         Edit
                     </Button>

@@ -3,16 +3,19 @@
     {
       "id": 1,
       "fullName": "Arnold Rispress",
-      "email": "arnold@user.com"
+      "email": "arnold@user.com",
+      "level": 2
     },
     {
       "email": "unc@user.com",
       "fullName": "Charlie Wilson",
+      "level": 1,
       "id": 2
     },
     {
       "email": "paula@user.com",
-      "fullName": "Paula Mooney",
+      "fullName": "Paula M.",
+      "level": 1,
       "id": 3
     },
     {
@@ -20,11 +23,13 @@
       "fullName": "",
       "formBasicEmail": "bill@user.com",
       "formFullName": "Bill Nye",
+      "level": 1,
       "id": 7
     },
     {
       "email": "dana@user.com",
       "fullName": "Dana User",
+      "level": 1,
       "id": 9
     }
   ],
@@ -35,6 +40,27 @@
       "country": "Sweden",
       "date": "2023-05-08T17:29:15.635Z",
       "id": 3
+    },
+    {
+      "userId": 1,
+      "city": "Paris",
+      "country": "France",
+      "date": "2023-05-09T14:33:18.904Z",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "city": "Kinsale",
+      "country": "Ireland",
+      "date": "2023-05-09T15:33:07.018Z",
+      "id": 5
+    },
+    {
+      "userId": 2,
+      "city": "Toronto",
+      "country": "Canada",
+      "date": "2023-05-09T19:15:33.190Z",
+      "id": 6
     }
   ],
   "tasks": [
@@ -97,6 +123,12 @@
       "imageUrl": "https://thumbs.dreamstime.com/b/traditional-english-pub-people-51113420.jpg",
       "caption": "Found a really neat pub!",
       "id": 3
+    },
+    {
+      "userId": 2,
+      "imageUrl": "https://a.cdn-hotels.com/gdcs/production78/d913/1a0e2001-5154-4a9c-a7bc-5b25d3615084.jpg",
+      "caption": "Toronto is such a beautiful place!",
+      "id": 4
     }
   ]
 }

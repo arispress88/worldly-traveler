@@ -30,11 +30,11 @@ export const Images = () => {
                     <Row xs={1} md={2} className="g-4">
                         
                             <Col>
-                            <Card style={{ width: '11rem' }}>
+                            <Card style={{ width: '24.8rem' }}>
                         <Card.Img variant="top" src={image.imageUrl} />
                         <Card.Body>
                             <Card.Title>
-                                <h3 className="image--post">{image?.user?.fullName} posted a photo</h3>
+                                <h3 className="image--post">{image?.user?.fullName} (Lvl. {image?.user?.level}) posted a photo</h3>
                             </Card.Title>
                             <Card.Text>
                                 <h4 className="image--caption">{image.caption}</h4>

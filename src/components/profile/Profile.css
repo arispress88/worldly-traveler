@@ -1,0 +1,24 @@
+.profile--title {
+    font-weight: bolder;
+    background-color: lightskyblue;
+    width: 500px center;
+    margin: 2rem;
+}
+
+.form-group {
+    margin: 1rem;
+    width: 500px center;
+    font-weight: bolder;
+}
+
+.form-control {
+    background-color: lightgray;
+    font-weight: bolder;
+}
+
+.profile--label {
+    font-weight: bolder;
+    background-color: lightskyblue;
+    font-size: 100%;
+    color: black;
+}

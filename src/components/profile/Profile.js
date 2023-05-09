@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Button } from "react-bootstrap"
+import "./Profile.css"
 
 export const Profile = () => {
     const [profile, updateProfile] = useState({
@@ -51,7 +52,7 @@ export const Profile = () => {
                 <h2 className="profile--title">Edit Profile</h2>
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="fullName">Full Name</label>
+                        <label className="profile--label" htmlFor="fullName">Full Name</label>
                         <input
                             required autoFocus
                             type="text"
@@ -66,7 +67,7 @@ export const Profile = () => {
                 </fieldset>
                 <fieldset>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>
+                        <label className="profile--label" htmlFor="email">Email</label>
                         <input
                             required autoFocus
                             type="text"
