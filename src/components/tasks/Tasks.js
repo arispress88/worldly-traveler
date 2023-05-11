@@ -5,25 +5,41 @@
 import React, {useState, useEffect} from "react";
 import { getTasks } from "../../ApiManager";
 import "./Tasks.css"
-import { Button, ProgressBar } from "react-bootstrap";
+import { Button, ProgressBar, Alert } from "react-bootstrap";
 
 
 export const Tasks = () => {
     const [task, setTask] = useState('');
-    const [completionPercentage, setCompletionPercentage] = useState(0);
+    // const [completionPercentage, setCompletionPercentage] = useState(0);
     const [progress, setProgress] = useState(0)
+    const [currentLevel, setCurrentLevel] = useState(1)
+    const [userId, setUserId] = useState("")
+    const [readySet, fire] = useState("")
+    
+
+
     useEffect(
         () => {
+            
+            
             getTasks()
             .then(
                 (tasks) =>{
                     const randomIndex = Math.floor(Math.random() * tasks.length);
                     const randomTask = tasks[randomIndex]
                     setTask(randomTask)
+                    
+                    //get user item and use it to set current level
                 }
             )
             .catch(error => console.error(error))
         }, [])
+        useEffect(() => {
+            const localUser = localStorage.getItem("worldly_user")
+            const userObject = JSON.parse(localUser)
+            setCurrentLevel(userObject.level)
+            setUserId(userObject.id)
+        }, [readySet])
 
         const handleButtonClick = () => {
             fetch(`http://localhost:8088/tasks`)
@@ -44,11 +60,12 @@ export const Tasks = () => {
                 if (progressIndex > 100) {
                     progressIndex = 100;
                     setProgress(progressIndex)
+                    handleProgressChange()
                 }
                 else {
                     setProgress(progressIndex)
                 }
-                setCompletionPercentage(progress);
+                // setCompletionPercentage(progress);
                 // *UNNEEDED CODE*
                 //if (progress === 100) {
                 //     clearInterval(intervalId)
@@ -57,8 +74,45 @@ export const Tasks = () => {
             
         }
 
+        const increaseLevel = (id) => {
+            let newLevel = currentLevel + 1 
+            return fetch(`http://localhost:8088/users/${id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    level: newLevel
+                })
+            })
+            .then(r => r.json())
+            .then(response => {
+                if (response) {
+                    console.log(response)
+                localStorage.setItem("worldly_user", JSON.stringify(response))
+                    fire("go");
+                    window.alert(`Congratulations! You're now level ${currentLevel + 1}`)
+                } else {
+                    console.log("Failed to update level");
+                }
+            })
+            .catch(error => {
+                console.log("Error updating level:", error);
+            });
+        };
+
+        function handleProgressChange() {
+        
+            //increaseLevel function needs id of current user
+            increaseLevel(userId);
+            
+        setProgress(0);
+    
+    }
+
         return (
-            <><div className="tasks">
+            <>
+            <div className="tasks">
                 <h2 className="task--title">Tasks (optional)</h2>
                 <Button variant="primary" type="generate" onClick={handleButtonClick}>
                     Generate a Task
@@ -67,10 +121,10 @@ export const Tasks = () => {
                 <Button variant="success" type="complete" onClick={handleCompletionClick}>
                     Task Complete
                 </Button>
-                <ProgressBar className="progress-bar" style={{ width: `${completionPercentage}%`}} completionPercentage={completionPercentage}></ProgressBar>
-                <p className="progress-report">You have completed {completionPercentage}% toward the next level!</p>
+                <ProgressBar className="progress-bar" style={{ width: `${progress}%`}} onClick={handleProgressChange} ></ProgressBar>
+                <p className="progress-report">You have completed {progress}% toward the next level!</p>
             </div>
                 
-                </>
+            </>
         )
 }

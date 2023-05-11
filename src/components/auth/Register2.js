@@ -8,6 +8,7 @@ export const Register2 = (props) => {
     const [user, setUser] = useState({
         email: "",
         fullName: "",
+        level: 1
     })
     let navigate = useNavigate()
 

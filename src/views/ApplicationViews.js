@@ -8,6 +8,7 @@ import { EditLocation } from "../components/locations/EditLocation";
 import { ImageForm } from "../components/images/ImageForm";
 import { Images } from "../components/images/Images";
 import { Links } from "../components/links/Links";
+import { LocationContainer } from "../components/locations/LocationContainer";
 
 export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
     return (
@@ -24,7 +25,7 @@ export const ApplicationViews = ({tasksRef, locationRef, imageRef}) => {
                         
 
                         <div className="section--middle">
-                            <div ref={locationRef} id="locations" className="locations--container"><LocationList /></div>
+                            <div ref={locationRef} id="locations" className="locations--container"><LocationContainer /></div>
                         </div>
 
                         <div className="section--right">

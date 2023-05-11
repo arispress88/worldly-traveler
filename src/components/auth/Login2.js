@@ -15,11 +15,9 @@ export const Login2 = () => {
         return fetch(`http://localhost:8088/users?email=${email}`)
         .then(r => r.json())
         .then(foundUsers => {
-            if (foundUsers.length === 1) {
+            if (foundUsers.length === 1) { 
                 const user = foundUsers[0]
-                localStorage.setItem("worldly_user", JSON.stringify({
-                    id: user.id
-                }))
+                localStorage.setItem("worldly_user", JSON.stringify(user))
 
                 navigate("/")
             }

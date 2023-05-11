@@ -17,16 +17,18 @@ export const LocationList = () => {
 
     useEffect(
         () => {
-            getLocation()
-            .then(
-                (locations) => {
-                    setLocations(locations)
-                }
-            )
+           getAndSetLocations()
         }, []
     )
 
-
+const getAndSetLocations = () => {
+    return getLocation()
+    .then(
+        (locations) => {
+            setLocations(locations)
+        }
+    )
+}
     return <article className="locations">
         {
             locations.map(location => {
