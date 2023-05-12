@@ -5,7 +5,7 @@
 import React, {useState, useEffect} from "react";
 import { getTasks } from "../../ApiManager";
 import "./Tasks.css"
-import { Button, ProgressBar, Alert } from "react-bootstrap";
+import { Button, ProgressBar } from "react-bootstrap";
 
 
 export const Tasks = () => {
@@ -91,7 +91,7 @@ export const Tasks = () => {
                     console.log(response)
                 localStorage.setItem("worldly_user", JSON.stringify(response))
                     fire("go");
-                    window.alert(`Congratulations! You're now level ${currentLevel + 1}`)
+                    window.alert(`Congratulations! You've reached level ${currentLevel + 1}!`)
                 } else {
                     console.log("Failed to update level");
                 }
